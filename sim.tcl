@@ -1,4 +1,3 @@
-set_param general.maxBackupLogs 0
 set top_module_name top
 set outputDir ./synth_tmp
 file mkdir $outputDir

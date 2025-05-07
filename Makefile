@@ -1,4 +1,4 @@
-VIVADO = /media/cotton/HDD0/Xilinx/Vivado/2022.2/bin/vivado
+VIVADO = vivado
 
 flow :
 	$(VIVADO) -mode batch -source flow.tcl  -nolog -nojournal
@@ -9,4 +9,4 @@ test :
 all: test flow
 
 clean:
-	rm -rf export_sim
+	rm -rf export_sim synth_tmp .Xil .ip_user_files

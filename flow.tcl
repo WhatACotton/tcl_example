@@ -8,8 +8,6 @@ set_part xc7z020clg400-1
 # step#1: Setup design sources and constraints.
 read_verilog ./src/top.v
 read_verilog ./src/tb.v
-generate_target {Synthesis} [get_files ./ip/pll/pll.xci]
-#read_verilog [ glob ./ip/pll/*.v ]
 read_xdc ./src/pin.xdc
 
 # step#2: Run synthesis, report utilization and timing estimates, write checkpoint design.
@@ -30,9 +28,7 @@ phys_opt_design
 write_checkpoint -force $outputDir/post_place
 report_timing_summary -file $outputDir/post_place_timing_summary.rpt
 
-
 # step#4: Run router, report actual utilization and timing, write checkpoint design, run drc, write verilog and xdc out.
-
 
 route_design
 write_checkpoint -force $outputDir/post_route

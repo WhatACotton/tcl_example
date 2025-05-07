@@ -1,5 +1,3 @@
-`timescale  1 ns/1 ps
-
 `timescale 1 ns / 1 ps
 
 module tb;

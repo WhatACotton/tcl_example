@@ -1,4 +1,4 @@
-# tcl_example
+# vivado_tcl_minimal_example
  
 please check vivado path
 ## extcute test
